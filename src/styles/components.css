@@ -1,0 +1,151 @@
+/* Sticker-aesthetic treatments that don't map cleanly to Tailwind utilities. */
+
+@layer components {
+  /* The chunky white card with thick navy outline + offset drop shadow. */
+  .sticker-card {
+    background: #ffffff;
+    border: 3px solid var(--color-ink);
+    border-radius: 18px;
+    box-shadow: 5px 5px 0 var(--color-ink);
+    padding: 22px 20px 16px;
+  }
+  .sticker-card-top {
+    box-shadow:
+      6px 6px 0 var(--color-ink),
+      0 0 0 6px var(--color-accent),
+      12px 12px 0 var(--color-ink);
+  }
+
+  /* Generic puffy pill — used for tags, badges, rank chips. */
+  .sticker-pill {
+    display: inline-block;
+    border: 2px solid var(--color-ink);
+    border-radius: 9999px;
+    box-shadow: 2px 2px 0 var(--color-ink);
+    font-weight: 700;
+    padding: 3px 10px;
+  }
+
+  /* Squared puffy chip (for the BigNumber labels). */
+  .sticker-chip {
+    display: inline-block;
+    border: 2px solid var(--color-ink);
+    border-radius: 6px;
+    font-weight: 700;
+    padding: 2px 8px;
+  }
+
+  /* Segmented Regular/VIP control. */
+  .sticker-seg {
+    display: inline-flex;
+    border: 2.5px solid var(--color-ink);
+    background: #ffffff;
+    border-radius: 9999px;
+    padding: 2px;
+    box-shadow: 2px 2px 0 var(--color-ink);
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    align-self: start;
+  }
+  .sticker-seg-btn {
+    padding: 5px 12px;
+    border-radius: 9999px;
+    color: var(--color-ink-mute);
+    transition: 0.12s;
+  }
+  .sticker-seg-btn-on {
+    background: var(--color-ink);
+    color: #ffffff;
+    font-weight: 700;
+  }
+
+  /* Sort buttons (Practical / Best / VIP). */
+  .sticker-sort-btn {
+    border: 2px solid var(--color-ink);
+    background: #ffffff;
+    color: var(--color-ink);
+    border-radius: 9999px;
+    font-weight: 700;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    padding: 5px 10px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: 0.12s;
+  }
+  .sticker-sort-btn-on {
+    background: var(--color-accent);
+    color: #ffffff;
+    box-shadow: 2px 2px 0 var(--color-ink);
+  }
+
+  /* Hero legend — translucent white box with navy outline and offset shadow. */
+  .sticker-legend {
+    border: 3px solid var(--color-ink);
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 14px;
+    padding: 14px;
+    box-shadow: 4px 4px 0 var(--color-ink);
+  }
+
+  /* Comparison table wrapper. */
+  .sticker-table-wrap {
+    background: #ffffff;
+    border: 3px solid var(--color-ink);
+    border-radius: 14px;
+    box-shadow: 5px 5px 0 var(--color-ink);
+    overflow: hidden;
+  }
+
+  /* Definition term — pink pill, matches the title-tag treatment. */
+  .sticker-dt {
+    display: block;
+    width: fit-content;
+    background: var(--color-accent);
+    color: #ffffff;
+    padding: 2px 10px;
+    border-radius: 9999px;
+    border: 2px solid var(--color-ink);
+    box-shadow: 2px 2px 0 var(--color-ink);
+    font-weight: 700;
+    white-space: nowrap;
+    margin-bottom: 8px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  /* Note arrow bullet. */
+  .sticker-note {
+    position: relative;
+    padding-left: 18px;
+  }
+  .sticker-note::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--color-accent);
+    font-family: var(--font-mono);
+    font-weight: 700;
+  }
+
+  /* Card area perforation — top + bottom dashed navy line around the BigNumbers. */
+  .sticker-perf {
+    border-top: 2.5px dashed var(--color-ink);
+    border-bottom: 2.5px dashed var(--color-ink);
+  }
+
+  /* "Show all tiers" button divider. */
+  .sticker-more {
+    border-top: 2px dashed var(--color-ink);
+  }
+
+  /* Footer divider. */
+  .sticker-foot {
+    border-top: 3px dashed var(--color-ink);
+  }
+}

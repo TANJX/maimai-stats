@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #9debff;
+  --color-paper: #ffffff;
+  --color-ink: #10306b;
+  --color-ink-soft: #3a5499;
+  --color-ink-mute: #7a89b7;
+  --color-rule: #10306b;
+  --color-rule-soft: #cfe5ff;
+  --color-accent: #ff4fb8;
+  --color-accent-2: #2ba7ff;
+  --color-pop: #ffe84a;
+  --color-best: #ff4fb8;
+  --color-trap: #ff5a3d;
+
+  --font-display: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-ink-mute) transparent;
+}
+
+body {
+  background:
+    radial-gradient(circle, rgba(16, 48, 107, 0.08) 1.2px, transparent 1.4px) 0 0 / 16px 16px,
+    linear-gradient(180deg, #b6efff 0%, #9debff 60%, #ffd6f2 100%);
+  background-attachment: fixed;
+  font-weight: 400;
+  min-height: 100vh;
+}
+
+/* Floating star/sparkle decor — fixed across the viewport */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 12% 18%, #ffe84a 2px, transparent 2.5px),
+    radial-gradient(circle at 88% 12%, #ff4fb8 2px, transparent 2.5px),
+    radial-gradient(circle at 22% 82%, #2ba7ff 2px, transparent 2.5px),
+    radial-gradient(circle at 78% 88%, #ffe84a 2px, transparent 2.5px);
+  opacity: 0.7;
+}
