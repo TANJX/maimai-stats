@@ -273,5 +273,42 @@ export const dataset: PricingDataset = {
         ],
       },
     },
+    {
+      id: "gameroom",
+      name: "The GAMEROOM",
+      area: "American Dream, NJ",
+      server: "International",
+      unitName: "credits",
+      unitsPerRound: 18,
+      practical: { cost: 3.0, spend: 50 },
+      best: { cost: 2.03, spend: 110 },
+      tiers: [
+        { spend: 10, units: 40, perUnit: 0.25, perRound: 4.5 },
+        { spend: 20, units: 85, perUnit: 0.2353, perRound: 4.24 },
+        { spend: 35, units: 175, perUnit: 0.2, perRound: 3.6 },
+        { spend: 50, units: 300, perUnit: 0.1667, perRound: 3.0, popular: true },
+        { spend: 75, units: 550, perUnit: 0.1364, perRound: 2.45 },
+        { spend: 100, units: 850, perUnit: 0.1176, perRound: 2.12 },
+        // Supercharge add-on combos — paired total spend = base + add-on.
+        { spend: 40, units: 210, perUnit: 0.1905, perRound: 3.43, combo: "+$5", trap: true },
+        { spend: 57, units: 355, perUnit: 0.1606, perRound: 2.89, combo: "+$7" },
+        { spend: 83, units: 620, perUnit: 0.1339, perRound: 2.41, combo: "+$8" },
+        { spend: 110, units: 975, perUnit: 0.1128, perRound: 2.03, combo: "+$10", best: true },
+      ],
+      notes: {
+        en: [
+          "**Wednesdays are 50% off** — rounds run 9 credits instead of 18, halving every $/round figure on this card. The $110 combo drops to ~$1.02/round on Wednesdays — the cheapest non-VIP rate in the entire survey.",
+          "**$10 supercharge add-on** is wildly efficient on its own — 125 credits for $10 ($0.08/cr), by far the cheapest marginal rate on the menu. The $100 + $10 combo is the clear winner.",
+          "Watch out for the **$5 supercharge** on the $35 pack: $40 for 210 credits ($0.1905/cr) is *worse* than just buying the $50 base pack ($0.1667/cr). Skip it unless you specifically need to stay under $50.",
+          "No card-activation fee, no membership tier — what's on the sign is what you pay.",
+        ],
+        zh: [
+          "**周三半价**——每局只需 9 点(平时 18 点),所有 $/局 数字都直接减半。$110 组合周三降到约 $1.02/局——是整份调查里最便宜的非 VIP 价位。",
+          "**$10 加价档** 单看极其划算——多花 $10 送 125 点($0.08/点),是菜单上最便宜的边际单价。$100 + $10 组合是明显的赢家。",
+          "注意 **$35 + $5 加价档** 是个坑:$40 拿 210 点($0.1905/点)反而比直接买 $50 基础档($0.1667/点)*更贵*。除非你特意要控制在 $50 以下,否则别选。",
+          "没有开卡费,没有会员等级——招牌写多少就是多少。",
+        ],
+      },
+    },
   ],
 };

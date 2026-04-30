@@ -85,38 +85,38 @@ A running comparison of maimai pricing at arcades around me. All prices in USD.
 
 ## The GAMEROOM — American Dream, NJ
 
-**Credits per round:** ~17 (ballpark from memory — confirm next visit)
+**Credits per round:** 18 (confirmed)
+
+**Wednesday discount:** 50% off — rounds run **9 credits** on Wednesdays. Halves every $/round figure below; the $110 combo drops to ~$1.02/round.
 
 **Base packages:**
 
-| Spend | Credits | $/credit |
-|---|---|---|
-| $10 | 40 | $0.2500 |
-| $20 | 85 | $0.2353 |
-| $35 | 175 | $0.2000 |
-| $50 | 300 | $0.1667 |
-| $75 | 550 | $0.1364 |
-| $100 | 850 | $0.1176 |
+| Spend | Credits | $/credit | Cost/round (18 cr) |
+|---|---|---|---|
+| $10 | 40 | $0.2500 | $4.50 |
+| $20 | 85 | $0.2353 | $4.24 |
+| $35 | 175 | $0.2000 | $3.60 |
+| $50 | 300 | $0.1667 | $3.00 |
+| $75 | 550 | $0.1364 | $2.45 |
+| $100 | 850 | $0.1176 | $2.12 |
 
 **Supercharge add-ons** (only available when buying the paired base package — pay extra on top, get more credits):
 
-| Pairs with | Add-on cost | Bonus credits | Combined total | Combined $/credit |
-|---|---|---|---|---|
-| $35 base | +$5 | +35 | $40 → 210 cr | $0.1905 |
-| $50 base | +$7 | +55 | $57 → 355 cr | $0.1606 |
-| $75 base | +$8 | +70 | $83 → 620 cr | $0.1339 |
-| $100 base | +$10 | +125 | $110 → 975 cr | **$0.1128** |
+| Pairs with | Add-on cost | Bonus credits | Combined total | Combined $/credit | Cost/round (18 cr) |
+|---|---|---|---|---|---|
+| $35 base | +$5 | +35 | $40 → 210 cr | $0.1905 | $3.43 |
+| $50 base | +$7 | +55 | $57 → 355 cr | $0.1606 | $2.89 |
+| $75 base | +$8 | +70 | $83 → 620 cr | $0.1339 | $2.41 |
+| $100 base | +$10 | +125 | $110 → 975 cr | **$0.1128** | **$2.03** |
 
 > The **$10 supercharge** is wildly efficient on its own — 125 credits for $10 ($0.08/cr), by far the cheapest marginal rate on the menu. The $100 + $10 combo is the clear winner.
 >
 > Watch out for the $5 supercharge on the $35 pack: $40 for 210 credits ($0.1905/cr) is *worse* than just buying the $50 base pack ($0.1667/cr). Skip the $5 supercharge unless you specifically need to stay under $50.
 
-**Headline numbers (ballpark, ~17 cr/round, best $110 pack at $0.1128/cr):**
-- ~17 cr/round: **~$1.92 per round**
-- 18 cr/round: ~$2.03 per round
-- 20 cr/round: ~$2.26 per round
-
-> Confirm credits/round on next visit — answer is sensitive to it. At ~17 it's roughly tied with Max Funland VIP and only slightly above Round 1; at 20 it's noticeably more expensive.
+**Headline numbers:**
+- $50 base pack (closest to $50 top-up): **$3.00 per round**
+- $110 combo (best): **$2.03 per round**
+- Wednesdays at 9 cr/round: **$1.50 / $1.02 per round** for the same two packs — cheapest non-VIP rate in the survey by a wide margin.
 
 ---
 
@@ -195,6 +195,6 @@ Cost/round numbers below assume the best practical credit pack at each arcade. $
 |---|---|---|---|
 | Gatcha (Flushing, NY) | 8.2 reg · 6.6 VIP | $2.35 | $1.89 |
 | Max Funland (FiDi, NY) | 17 (both) | $2.34 | $1.91 |
-| The GAMEROOM (American Dream, NJ) | ~17 (ballpark) | ~$1.92 ($110 combo) | n/a |
+| The GAMEROOM (American Dream, NJ) | 18 | $3.00 ($50) · $2.03 ($110 combo) · $1.02 ($110 combo, Wednesdays) | n/a |
 | Round 1 (Elizabeth, NJ) | 8.4 | $1.54 ($55) · $1.30 ($120) | $1.16 ($110 VIP) |
 | River City Gaming (Rahway, NJ) | 1 | $1.20 ($60 pack) | n/a |
