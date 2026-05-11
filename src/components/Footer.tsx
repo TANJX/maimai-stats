@@ -17,7 +17,7 @@ export function Footer({ lastUpdated }: Props) {
       <p className="text-[13px] leading-relaxed text-ink-soft m-0 max-w-[68ch] text-pretty">
         {t.footer.caveatPre}
         <a
-          href="https://github.com/TANJX"
+          href="https://github.com/TANJX/maimai-stats"
           target="_blank"
           rel="noopener noreferrer"
           className="font-mono font-semibold text-ink underline decoration-2 decoration-accent underline-offset-[3px] hover:text-accent transition-colors"
