@@ -36,6 +36,10 @@ export const zh: Dict = {
     practical: "实用价",
     best: "最低价",
     vip: "VIP 优先",
+    filterBy: "服务器",
+    all: "全部",
+    international: "国际服",
+    mythos: "Mythos",
   },
   card: {
     rankNum: (rank) => `#${rank}`,

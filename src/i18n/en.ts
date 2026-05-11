@@ -37,6 +37,10 @@ export const en = {
     practical: "Practical",
     best: "Best case",
     vip: "VIP if avail.",
+    filterBy: "Server",
+    all: "All",
+    international: "International",
+    mythos: "Mythos",
   },
   card: {
     rankNum: (rank: number) => `#${rank}`,

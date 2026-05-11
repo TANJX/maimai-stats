@@ -1,30 +1,86 @@
 import { useMemo } from "react";
-import type { Arcade } from "../types/pricing";
+import type { Arcade, Server } from "../types/pricing";
 import { rankArcades, type RankBy } from "../lib/ranking";
 import { useT } from "../i18n";
 import { ArcadeCard } from "./ArcadeCard";
+
+export type ServerFilter = "all" | Server;
 
 interface Props {
   arcades: Arcade[];
   rankBy: RankBy;
   onRankByChange: (next: RankBy) => void;
+  serverFilter: ServerFilter;
+  onServerFilterChange: (next: ServerFilter) => void;
+  showMythosFilter: boolean;
 }
 
-export function Leaderboard({ arcades, rankBy, onRankByChange }: Props) {
+export function Leaderboard({
+  arcades,
+  rankBy,
+  onRankByChange,
+  serverFilter,
+  onServerFilterChange,
+  showMythosFilter,
+}: Props) {
   const t = useT();
   const ranked = useMemo(() => rankArcades(arcades, rankBy), [arcades, rankBy]);
 
   return (
     <section className="mb-12">
-      <div className="flex items-center justify-between gap-4 mb-3.5 flex-wrap">
-        <h2 className="font-mono text-[11px] tracking-[0.14em] uppercase text-ink m-0 font-bold">
-          {t.leaderboard.section}
-        </h2>
+      <div className="flex items-center justify-between gap-4 mb-8 flex-wrap">
+        {showMythosFilter ? (
+          <div className="flex items-center gap-2 font-mono text-[11px] tracking-[0.08em] uppercase text-ink flex-wrap">
+            <span className="font-semibold whitespace-nowrap">
+              {t.leaderboard.filterBy}
+            </span>
+            <FilterButton
+              current={serverFilter}
+              value="all"
+              label={t.leaderboard.all}
+              onClick={onServerFilterChange}
+            />
+            <FilterButton
+              current={serverFilter}
+              value="International"
+              label={t.leaderboard.international}
+              onClick={onServerFilterChange}
+            />
+            <FilterButton
+              current={serverFilter}
+              value="Mythos"
+              label={t.leaderboard.mythos}
+              onClick={onServerFilterChange}
+            />
+          </div>
+        ) : (
+          <h2 className="font-mono text-[11px] tracking-[0.14em] uppercase text-ink m-0 font-bold">
+            {t.leaderboard.section}
+          </h2>
+        )}
+
         <div className="flex items-center gap-2 font-mono text-[11px] tracking-[0.08em] uppercase text-ink flex-wrap">
-          <span className="font-semibold whitespace-nowrap">{t.leaderboard.rankBy}</span>
-          <SortButton current={rankBy} value="practical" label={t.leaderboard.practical} onClick={onRankByChange} />
-          <SortButton current={rankBy} value="best" label={t.leaderboard.best} onClick={onRankByChange} />
-          <SortButton current={rankBy} value="vip" label={t.leaderboard.vip} onClick={onRankByChange} />
+          <span className="font-semibold whitespace-nowrap">
+            {t.leaderboard.rankBy}
+          </span>
+          <SortButton
+            current={rankBy}
+            value="practical"
+            label={t.leaderboard.practical}
+            onClick={onRankByChange}
+          />
+          <SortButton
+            current={rankBy}
+            value="best"
+            label={t.leaderboard.best}
+            onClick={onRankByChange}
+          />
+          <SortButton
+            current={rankBy}
+            value="vip"
+            label={t.leaderboard.vip}
+            onClick={onRankByChange}
+          />
         </div>
       </div>
 
@@ -45,6 +101,26 @@ interface SortButtonProps {
 }
 
 function SortButton({ current, value, label, onClick }: SortButtonProps) {
+  const on = current === value;
+  return (
+    <button
+      type="button"
+      className={`sticker-sort-btn ${on ? "sticker-sort-btn-on" : ""}`}
+      onClick={() => onClick(value)}
+    >
+      {label}
+    </button>
+  );
+}
+
+interface FilterButtonProps {
+  current: ServerFilter;
+  value: ServerFilter;
+  label: string;
+  onClick: (next: ServerFilter) => void;
+}
+
+function FilterButton({ current, value, label, onClick }: FilterButtonProps) {
   const on = current === value;
   return (
     <button
