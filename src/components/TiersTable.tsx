@@ -1,5 +1,5 @@
 import type { Arcade } from "../types/pricing";
-import { fmt, fmtCents } from "../lib/format";
+import { fmt } from "../lib/format";
 import { renderInline } from "../lib/markdown";
 import { useT, useLocale } from "../i18n";
 
@@ -12,7 +12,10 @@ export function TiersTable({ arcade, showVip }: Props) {
   const t = useT();
   const [locale] = useLocale();
   const unitLabel = arcade.unitName;
-  const perUnitLabel = unitLabel.replace(/s$/, "");
+  const unitsPerRound =
+    showVip && arcade.unitsPerRoundVip != null
+      ? arcade.unitsPerRoundVip
+      : arcade.unitsPerRound;
 
   const rows = arcade.tiers
     .filter((tr) => (showVip ? tr.perRoundVip != null : tr.perRound != null))
@@ -32,10 +35,10 @@ export function TiersTable({ arcade, showVip }: Props) {
               {unitLabel}
             </th>
             <th className="text-right font-mono font-medium text-[10px] tracking-[0.1em] uppercase text-ink-mute pb-2 px-2 border-b-2 border-ink">
-              {t.tiers.perUnit(perUnitLabel)}
+              {showVip ? t.tiers.perRoundVip : t.tiers.perRound}
             </th>
             <th className="text-right font-mono font-medium text-[10px] tracking-[0.1em] uppercase text-ink-mute pb-2 px-2 border-b-2 border-ink">
-              {showVip ? t.tiers.perRoundVip : t.tiers.perRound}
+              {t.tiers.rounds}
             </th>
             <th className="border-b-2 border-ink pb-2"></th>
           </tr>
@@ -45,6 +48,10 @@ export function TiersTable({ arcade, showVip }: Props) {
             const isBest = showVip ? tr.vipBest : tr.best;
             const rowBg = isBest ? "bg-rule-soft" : "";
             const trapTd = tr.trap ? "text-trap" : "text-ink";
+            const tierUnits =
+              showVip && tr.vipUnits != null ? tr.vipUnits : tr.units;
+            const tierRounds =
+              tierUnits != null ? Math.floor(tierUnits / unitsPerRound) : null;
             return (
               <tr key={i} className={rowBg}>
                 <td className="py-1.5 pl-0 pr-2 border-b border-rule-soft">
@@ -56,15 +63,15 @@ export function TiersTable({ arcade, showVip }: Props) {
                   )}
                 </td>
                 <td className="text-right py-1.5 px-2 border-b border-rule-soft">
-                  {showVip && tr.vipUnits != null ? tr.vipUnits : (tr.units ?? "—")}
-                </td>
-                <td className="text-right py-1.5 px-2 border-b border-rule-soft">
-                  {fmtCents(tr.perUnit)}
+                  {tierUnits ?? "—"}
                 </td>
                 <td
                   className={`text-right py-1.5 px-2 border-b border-rule-soft font-semibold ${trapTd}`}
                 >
                   {fmt(showVip ? tr.perRoundVip : tr.perRound)}
+                </td>
+                <td className="text-right py-1.5 px-2 border-b border-rule-soft">
+                  {tierRounds ?? "—"}
                 </td>
                 <td className="py-1.5 pl-2 pr-0 border-b border-rule-soft">
                   <div className="flex gap-1 justify-end flex-wrap">

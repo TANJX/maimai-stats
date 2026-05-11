@@ -307,8 +307,9 @@ export const dataset: PricingDataset = {
       unitsPerRound: 15,
       practical: { cost: 3.05, spend: 46 },
       best: { cost: 2.42, spend: 146.25 },
+      cardFee: 1.5,
       tiers: [
-        { spend: 25, units: 102, perUnit: 0.2451, perRound: 3.68 },
+        { spend: 25, units: 106, perUnit: 0.2358, perRound: 3.54 },
         { spend: 46, units: 226, perUnit: 0.2035, perRound: 3.05 },
         { spend: 71.5, units: 356, perUnit: 0.2008, perRound: 3.01 },
         { spend: 100, units: 600, perUnit: 0.1667, perRound: 2.5 },

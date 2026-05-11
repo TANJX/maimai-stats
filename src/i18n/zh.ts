@@ -59,7 +59,7 @@ export const zh: Dict = {
   },
   tiers: {
     spend: "充值",
-    perUnit: (unit) => `每${unit}单价`,
+    rounds: "局数",
     perRound: "每局价",
     perRoundVip: "每局价 VIP",
     flagBest: "最佳",

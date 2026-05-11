@@ -60,7 +60,7 @@ export const en = {
   },
   tiers: {
     spend: "Spend",
-    perUnit: (unit: string) => `$/${unit}`,
+    rounds: "Rounds",
     perRound: "$/round",
     perRoundVip: "$/round VIP",
     flagBest: "best",
