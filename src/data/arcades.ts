@@ -4,7 +4,7 @@ import type { PricingDataset } from "../types/pricing";
 // The GAMEROOM is intentionally omitted — its credits-per-round was a "ballpark
 // from memory", not confirmed. Add it back once verified in person.
 export const dataset: PricingDataset = {
-  lastUpdated: "2026-04-26",
+  lastUpdated: "2026-05-10",
   arcades: [
     {
       id: "round1",
@@ -270,6 +270,39 @@ export const dataset: PricingDataset = {
           "招牌把 **$55 / 192 点** 标为 *最划算*,但实际上 $108 / 379 更便宜($0.2850/点 vs. $0.2865/点)。从实用角度,$55 套餐才是真正的甜点档。",
           "**$78 档** 是个坑——单价比下面的 $55 和上面的 $108 都*更贵*。跳过。",
           "开卡费 $2(不计入每局价格)。",
+        ],
+      },
+    },
+    {
+      id: "chinatownfair",
+      name: "Chinatown Fair Family Fun Center",
+      area: "Chinatown, NY",
+      server: "International",
+      unitName: "credits",
+      unitsPerRound: 15,
+      practical: { cost: 3.05, spend: 46 },
+      best: { cost: 2.42, spend: 146.25 },
+      tiers: [
+        { spend: 25, units: 102, perUnit: 0.2451, perRound: 3.68 },
+        { spend: 46, units: 226, perUnit: 0.2035, perRound: 3.05 },
+        { spend: 71.5, units: 356, perUnit: 0.2008, perRound: 3.01 },
+        { spend: 100, units: 600, perUnit: 0.1667, perRound: 2.5 },
+        { spend: 146.25, units: 906, perUnit: 0.1614, perRound: 2.42, best: true },
+      ],
+      notes: {
+        en: [
+          "**The pack name doesn't always match what you pay.** Sign labels are *$25 / $50 / $75 / $100 / $150*, but actual prices charged are **$25 / $46 / $71.50 / $100 / $146.25**. The $50, $75, and $150 packs are quietly discounted off the label; the $25 and $100 packs cost exactly what's on the sign.",
+          "Each pack shows on the sign as `base + bonus` credits — e.g. the labeled $50 pack is 184 + 42 = **226 credits for $46**.",
+          "At **15 credits/round**, even the top $146.25 pack lands at $2.42/round — pricier than other International-server NYC arcades like Gatcha ($2.34) and Max Funland ($2.34 regular).",
+          "The *$75* tier is barely better than *$50* — $3.01 vs $3.05/round for $25.50 more spend. Either commit to *$100* (drops to $2.50) or stay at *$50*.",
+          "No VIP or membership tier observed.",
+        ],
+        zh: [
+          "**套餐名字和实际价格不完全一致。** 招牌上标的是 *$25 / $50 / $75 / $100 / $150*,但实际收费分别是 **$25 / $46 / $71.50 / $100 / $146.25**。$50、$75、$150 套餐悄悄打了点折;$25 和 $100 与标价一致。",
+          "招牌上每个套餐写成 `底分 + 加送` 的形式——例如标作 $50 的套餐为 184 + 42 = **226 点,$46**。",
+          "**每局 15 点**,即便顶档 $146.25 套餐也要 $2.42/局——比同样国际服的 Gatcha($2.34)和 Max Funland($2.34 普通)都贵。",
+          "*$75* 档几乎和 *$50* 一样划算——$3.01 vs $3.05/局,却要多花 $25.50。要么直接上 *$100*($2.50/局),要么停在 *$50* 档。",
+          "未观察到 VIP / 会员等级。",
         ],
       },
     },

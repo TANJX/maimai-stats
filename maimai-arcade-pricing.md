@@ -2,7 +2,7 @@
 
 A running comparison of maimai pricing at arcades around me. All prices in USD.
 
-**Last updated:** 2026-04-26
+**Last updated:** 2026-05-10
 
 ---
 
@@ -11,6 +11,31 @@ A running comparison of maimai pricing at arcades around me. All prices in USD.
 - **Token cost** — what you pay per token (and any bulk-buy deals).
 - **Tokens per round** — how many tokens one play of maimai costs.
 - **Cost per round** — effective price for one play, calculated from the above.
+
+---
+
+## Chinatown Fair Family Fun Center — Chinatown, NY
+
+**Server:** International
+**Credits per round:** 15
+
+**Credit packages** (sign shows pack as `base + bonus` credits; *pack name* doesn't always match the *actual price charged*):
+
+| Pack name | Base + bonus | Total credits | Actual price | $/credit | Cost/round (15 cr) |
+|---|---|---|---|---|---|
+| $25 | 90 + 12 | 102 | $25.00 | $0.2451 | $3.68 |
+| $50 | 184 + 42 | 226 | $46.00 | $0.2035 | $3.05 |
+| $75 | 286 + 70 | 356 | $71.50 | $0.2008 | $3.01 |
+| $100 | 400 + 200 | 600 | $100.00 | $0.1667 | $2.50 |
+| $150 | 585 + 321 | 906 | $146.25 | $0.1614 | **$2.42** |
+
+> The $50, $75, and $150 packs are quietly discounted off their label (you pay $46 / $71.50 / $146.25 respectively). The $25 and $100 packs cost exactly what they advertise.
+>
+> The $75 tier is nearly identical per-round to $50 ($3.01 vs $3.05) — $25.50 more spend for $0.04/round of improvement. Either commit to $100 ($2.50/round) or stick with the $50 pack.
+
+**Headline numbers:**
+- $50 (labeled) pack: ~$3.05 per round
+- $150 (labeled) pack (best): **~$2.42 per round**
 
 ---
 
@@ -193,6 +218,7 @@ Cost/round numbers below assume the best practical credit pack at each arcade. $
 
 | Arcade | Credits/round | Cost/round (regular) | Cost/round (VIP) |
 |---|---|---|---|
+| Chinatown Fair (Chinatown, NY) | 15 | $3.05 ($46 pack) · $2.42 ($146.25 pack) | n/a |
 | Gatcha (Flushing, NY) | 8.2 reg · 6.6 VIP | $2.35 | $1.89 |
 | Max Funland (FiDi, NY) | 17 (both) | $2.34 | $1.91 |
 | The GAMEROOM (American Dream, NJ) | 18 | $3.00 ($50) · $2.03 ($110 combo) · $1.02 ($110 combo, Wednesdays) | n/a |
