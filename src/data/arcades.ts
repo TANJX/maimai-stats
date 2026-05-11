@@ -4,7 +4,7 @@ import type { PricingDataset } from "../types/pricing";
 // The GAMEROOM is intentionally omitted — its credits-per-round was a "ballpark
 // from memory", not confirmed. Add it back once verified in person.
 export const dataset: PricingDataset = {
-  lastUpdated: "2026-05-10",
+  lastUpdated: "2026-05-11",
   arcades: [
     {
       id: "round1",
@@ -270,6 +270,31 @@ export const dataset: PricingDataset = {
           "招牌把 **$55 / 192 点** 标为 *最划算*,但实际上 $108 / 379 更便宜($0.2850/点 vs. $0.2865/点)。从实用角度,$55 套餐才是真正的甜点档。",
           "**$78 档** 是个坑——单价比下面的 $55 和上面的 $108 都*更贵*。跳过。",
           "开卡费 $2(不计入每局价格)。",
+        ],
+      },
+    },
+    {
+      id: "akibahouse",
+      name: "Akiba House",
+      area: "Chinatown, NY",
+      server: "Mythos",
+      unitName: "credits",
+      unitsPerRound: 2,
+      practical: { cost: 2.18, spend: 1.09 },
+      best: { cost: 2.18, spend: 1.09 },
+      tiers: [
+        { spend: 1.09, units: 1, perUnit: 1.08875, perRound: 2.18 },
+      ],
+      notes: {
+        en: [
+          "**Flat pay-as-you-go pricing — no bulk discount.** Base rate is $1 = 1 credit, plus NYC sales tax 8.875% → effective **~$1.09 per credit**.",
+          "At **2 credits/round**, every round costs ~**$2.18** regardless of how much you load. Loading more does not get you cheaper rounds.",
+          "No card-activation fee and no VIP/membership tier observed.",
+        ],
+        zh: [
+          "**按量线性定价,无套餐优惠。** 基础价 $1 = 1 币,再加 8.875% 纽约消费税,实际约 **$1.09/币**。",
+          "每局 **2 币**,因此每局固定约 **$2.18**,与一次充值多少无关——充得多并不会更便宜。",
+          "未观察到开卡费,也没有 VIP / 会员等级。",
         ],
       },
     },

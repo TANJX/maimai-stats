@@ -2,7 +2,7 @@
 
 A running comparison of maimai pricing at arcades around me. All prices in USD.
 
-**Last updated:** 2026-05-10
+**Last updated:** 2026-05-11
 
 ---
 
@@ -212,12 +212,28 @@ Token Card $2 (excluded from per-round math).
 
 ---
 
+## Akiba House — Chinatown, NY
+
+**Server:** Mythos
+**Credits per round:** 2
+
+**Pricing:** Flat pay-as-you-go — **$1 = 1 credit**, plus NYC sales tax **8.875%** (~$1.09/credit). No packs, no bulk discount, no membership tier.
+
+| $/credit (post-tax) | Credits/round | Cost/round |
+|---|---|---|
+| $1.0888 | 2 | **$2.18** |
+
+> Every dollar converts identically — loading more doesn't lower the per-round cost. Effective rate is locked at **~$2.18/round**.
+
+---
+
 ## Quick comparison
 
 Cost/round numbers below assume the best practical credit pack at each arcade. $/credit isn't comparable across locations because credits-per-round differs — only cost/round is.
 
 | Arcade | Credits/round | Cost/round (regular) | Cost/round (VIP) |
 |---|---|---|---|
+| Akiba House (Chinatown, NY) | 2 | $2.18 (flat, any load) | n/a |
 | Chinatown Fair (Chinatown, NY) | 15 | $3.05 ($46 pack) · $2.42 ($146.25 pack) | n/a |
 | Gatcha (Flushing, NY) | 8.2 reg · 6.6 VIP | $2.35 | $1.89 |
 | Max Funland (FiDi, NY) | 17 (both) | $2.34 | $1.91 |
