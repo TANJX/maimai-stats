@@ -4,7 +4,7 @@ import type { PricingDataset } from "../types/pricing";
 // The GAMEROOM is intentionally omitted — its credits-per-round was a "ballpark
 // from memory", not confirmed. Add it back once verified in person.
 export const dataset: PricingDataset = {
-  lastUpdated: "2026-05-11",
+  lastUpdated: "2026-05-13",
   arcades: [
     {
       id: "round1",
@@ -329,6 +329,39 @@ export const dataset: PricingDataset = {
           "**每局 15 点**,即便顶档 $146.25 套餐也要 $2.42/局——比同样国际服的 Gatcha($2.34)和 Max Funland($2.34 普通)都贵。",
           "*$75* 档几乎和 *$50* 一样划算——$3.01 vs $3.05/局,却要多花 $25.50。要么直接上 *$100*($2.50/局),要么停在 *$50* 档。",
           "未观察到 VIP / 会员等级。",
+        ],
+      },
+    },
+    {
+      id: "royalmagiccastle",
+      name: "Royal Magic Castle",
+      area: "Flushing, NY",
+      server: "Mythos",
+      unitName: "credits",
+      unitsPerRound: 6,
+      practical: { cost: 2.07, spend: 40 },
+      best: { cost: 1.96, spend: 100 },
+      cardFee: 1,
+      tiers: [
+        { spend: 10, units: 26, perUnit: 0.3846, perRound: 2.31 },
+        { spend: 20, units: 56, perUnit: 0.3571, perRound: 2.14 },
+        { spend: 40, units: 116, perUnit: 0.3448, perRound: 2.07 },
+        { spend: 60, units: 176, perUnit: 0.3409, perRound: 2.05 },
+        { spend: 80, units: 236, perUnit: 0.339, perRound: 2.03 },
+        { spend: 100, units: 306, perUnit: 0.3268, perRound: 1.96, best: true },
+      ],
+      notes: {
+        en: [
+          "**6 credits/round** — fewest credits/round in the survey, so even the small $20 pack lands at $2.14/round pre-tax.",
+          "Reportedly **paying in cash may bypass tax**.",
+          "**$1 card activation fee** on the $10 and $20 packs only — waived for packs **$40 and up**.",
+          "Sign labels **$100 / 306 credits** as *Best Value*. Pre-tax it's $1.96/round; post-tax ~$2.13/round.",
+        ],
+        zh: [
+          "**每局 6 点**——是本次调查里每局点数最少的,即便 $20 小套餐每局也只要 $2.14(税前)。",
+          "据说**付现金可以免税**。",
+          "**$1 开卡费** 仅适用于 $10 和 $20 套餐——$40 及以上套餐免开卡费。",
+          "招牌把 **$100 / 306 点** 标为 *最划算*。税前每局 $1.96,税后约 $2.13。",
         ],
       },
     },
